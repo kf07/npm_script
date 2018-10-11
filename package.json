@@ -1,0 +1,29 @@
+{
+  "name": "npm-script",
+  "version": "1.0.0",
+  "description": "\"# npm_script\"",
+  "main": "index.js",
+  "scripts": {
+    "build:scss": "node-sass --importer node_modules/node-sass-globbing/index.js src/sass --output dist/assets/css --output-style compressed",
+    "pug": "pug src/pug/index.pug -P -output ./dist/",
+    "watch:scss": "node-sass src/scss/ --output dist/assets/css",
+    "scss:help": "node-sass --help"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kf07/npm_script.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kf07/npm_script/issues"
+  },
+  "homepage": "https://github.com/kf07/npm_script#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.3",
+    "node-sass-globbing": "0.0.23",
+    "pug": "^2.0.3",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}

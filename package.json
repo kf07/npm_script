@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build:scss": "node-sass --importer node_modules/node-sass-globbing/index.js src/sass --output dist/assets/css --output-style compressed",
-    "pug": "pug src/pug --hierarchy --out ./dist/ --pretty"
+    "build:pug": "pug src/pug --hierarchy --out ./dist/ --pretty",
+    "watch"     : "npm run watch:scss & npm run watch:pug",
+    "watch:scss": "node-sass --importer node_modules/node-sass-globbing/index.js src/sass --output dist/assets/css --output-style compressed -w",
+    "watch:pug": "pug src/pug --hierarchy --out ./dist/ --pretty -w"
   },
   "repository": {
     "type": "git",

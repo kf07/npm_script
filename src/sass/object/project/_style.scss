@@ -1,0 +1,30 @@
+.p-Header {
+  background-color: rgba(51, 204, 255, 0.7);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.p-Header__inner {
+  max-width: 960px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.p-Nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.p-Nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.p-MainVisual {
+  background-image: url(#{$path}main-visual.jpg);
+  padding: 56% 0 0;
+  background-size: cover;
+}

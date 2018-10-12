@@ -6,9 +6,10 @@
   "scripts": {
     "build:scss": "node-sass --importer node_modules/node-sass-globbing/index.js src/sass --output dist/assets/css --output-style compressed",
     "build:pug": "pug src/pug --hierarchy --out ./dist/ --pretty",
-    "watch"     : "npm run watch:scss & npm run watch:pug",
+    "watch": "npm run watch:pug & npm run watch:scss",
     "watch:scss": "node-sass --importer node_modules/node-sass-globbing/index.js src/sass --output dist/assets/css --output-style compressed -w",
-    "watch:pug": "pug src/pug --hierarchy --out ./dist/ --pretty -w"
+    "watch:pug": "pug src/pug --hierarchy --out ./dist/ --pretty -w",
+    "dev": "browser-sync start --server ./dist/ --files 'dist/assets/css/*.css, dist/assets/js/*.js, dist/**/*.html'"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,8 @@
   },
   "homepage": "https://github.com/kf07/npm_script#readme",
   "devDependencies": {
+    "browser-sync": "^2.26.0",
+    "glob": "^7.1.3",
     "node-sass": "^4.9.3",
     "node-sass-globbing": "0.0.23",
     "pug": "^2.0.3",

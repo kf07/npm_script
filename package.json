@@ -10,6 +10,7 @@
     "watch": "npm-run-all -p watch:*",
     "watch:scss": "onchange ./src/sass -- npm run build:scss",
     "watch:pug": "pug src/pug --hierarchy --out ./dist/ --pretty -w",
+    "watch:js": "babel src/es6 --out-dir ./dist/assets/js -w",
     "dev": "browser-sync start --server ./dist/ --files 'dist/assets/css/*.css, dist/assets/js/*.js, dist/**/*.html'"
   },
   "repository": {
